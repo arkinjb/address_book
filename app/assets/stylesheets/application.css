@@ -18,6 +18,10 @@
   text-align: center;
 }
 
+#newbutton {
+  margin: .5em 0;
+}
+
 .panel-title {
   font-size: 2em;
 }
