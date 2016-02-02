@@ -1,3 +1,5 @@
 <h2><%= @contact.first_name %> <%= @contact.last_name %></h2>
 <p><%= @contact.address %> <%= @contact.city %>, <%= @contact.state %> <%= @contact.zip_code %></p>
-<button class="btn btn-default"><%= link_to "Edit Contact", edit_contact_path(@contact) %></button>
+<button class="btn btn-default"><%= link_to "Edit Contact", edit_contact_path(@contact), remote: true %></button>
+
+<div id="contact-modal" class="modal fade"></div>

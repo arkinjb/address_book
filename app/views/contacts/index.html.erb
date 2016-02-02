@@ -1,6 +1,6 @@
 <div class="page-header">
   <h1>Address Book</h1>
-  <button class="btn btn-default"><%= link_to "New Contact", new_contact_path %></button>
+  <button class="btn btn-default"><%= link_to "New Contact", new_contact_path, remote: true %></button>
 </div>
 <div class="container">
 
@@ -10,5 +10,9 @@
     <% end %>
 
   </div>
+
+  <div class="new-contact"></div>
+  <div id="contact-modal" class="modal fade"></div>
+
 
 </div>

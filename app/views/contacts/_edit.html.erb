@@ -1,0 +1,12 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3><%= "Editing #{@contact.first_name} #{@contact.last_name}" %></h3>
+    </div>
+    <%= render "form" %>
+  </div> <!-- content div -->
+</div> <!-- dialog div -->
+
+<!-- <%= form_for @contact, method: :delete do |f| %>
+  <%= f.submit "Delete Contact" %>
+<% end %> -->
