@@ -1,21 +1,27 @@
-<% @contacts.each do |contact| %>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h2 class="panel-title"><%= contact.first_name %> <%= contact.last_name %></h2>
-    </div>
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-md-6">
-          <p><%= contact.address %></p>
-          <p><%= contact.city %>, <%= contact.state %> <%= contact.zip_code %></p>
-        </div>
-        <div class="col-md-6">
-          <p><%= contact.email_address %></p>
-          <p><%= contact.phone_number %></p>
+<div class="panel-group" id="contact-accordion">
+  <% @contacts.each_with_index do |contact, index| %>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">
+          <a data-toggle="collapse" data-parent="#contact-accordion" href="#collapse<%= index.to_s %>"><%= contact.first_name %> <%= contact.last_name %></a>
+        </h2>
+      </div>
+      <div id="collapse<%= index.to_s %>" class="accordion-body collapse">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <p><%= contact.address %></p>
+              <p><%= contact.city %>, <%= contact.state %> <%= contact.zip_code %></p>
+            </div>
+            <div class="col-md-6">
+              <p><%= contact.email_address %></p>
+              <p><%= contact.phone_number %></p>
+            </div>
+          </div>
+          <button class="btn btn-default"><%= link_to "Edit Contact", edit_contact_path(contact), remote: true %></button>
+          <button class="btn btn-danger"><%= link_to "Delete", contact_delete_path(contact), remote: true %></button>
         </div>
       </div>
-      <button class="btn btn-default"><%= link_to "Edit Contact", edit_contact_path(contact), remote: true %></button>
-      <button class="btn btn-danger"><%= link_to "Delete", contact_delete_path(contact), remote: true %></button>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
