@@ -4,8 +4,16 @@
       <h2 class="panel-title"><%= contact.first_name %> <%= contact.last_name %></h2>
     </div>
     <div class="panel-body">
-      <p><%= contact.address %></p>
-      <p><%= contact.city %>, <%= contact.state %> <%= contact.zip_code %></p>
+      <div class="row">
+        <div class="col-md-6">
+          <p><%= contact.address %></p>
+          <p><%= contact.city %>, <%= contact.state %> <%= contact.zip_code %></p>
+        </div>
+        <div class="col-md-6">
+          <p><%= contact.email_address %></p>
+          <p><%= contact.phone_number %></p>
+        </div>
+      </div>
       <button class="btn btn-default"><%= link_to "Edit Contact", edit_contact_path(contact), remote: true %></button>
       <button class="btn btn-danger"><%= link_to "Delete", contact_delete_path(contact), remote: true %></button>
     </div>
