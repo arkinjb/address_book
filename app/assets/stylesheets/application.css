@@ -17,3 +17,7 @@
 .page-header {
   text-align: center;
 }
+
+form input {
+  display: block;
+}

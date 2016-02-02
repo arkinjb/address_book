@@ -1,0 +1,22 @@
+<%= form_for(@contact, multipart: true) do |f| %>
+
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+  <%= f.label :zip_code %>
+  <%= f.text_field :zip_code %>
+
+  <% if @contact.new_record? %>
+    <%= f.submit "Add Contact" %>
+  <% else %>
+    <%= f.submit "Update Contact" %>
+  <% end %>
+
+<% end %>
