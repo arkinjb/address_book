@@ -9,6 +9,7 @@ class ContactsController < ApplicationController
   end
 
   def create
+    @contacts = Contact.all
     @contact = Contact.create(contact_params)
   end
 
@@ -21,6 +22,7 @@ class ContactsController < ApplicationController
   end
 
   def update
+    @contacts = Contact.all
     @contact = Contact.find(params[:id])
     @contact.update(contact_params)
   end
@@ -30,6 +32,7 @@ class ContactsController < ApplicationController
   end
 
   def destroy
+    @contacts = Contact.all
     @contact = Contact.find(params[:id])
     @contact.destroy
   end

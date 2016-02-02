@@ -4,6 +4,6 @@ $("ul.errors").html("")
     $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
   <% end %>
 <% else %>
-  $(".contact-index").html("<%= escape_javascript(redirect_to artists_path) %>")
+  $(".contact-index").html("<%= escape_javascript(render 'index') %>")
   $("#contact-modal").modal("hide")
 <% end %>

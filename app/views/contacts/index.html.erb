@@ -1,13 +1,11 @@
 <div class="page-header">
   <h1>Address Book</h1>
-  <button class="btn btn-default"><%= link_to "New Contact", new_contact_path, remote: true %></button>
+  <button class="btn btn-default btn-lg"><%= link_to "New Contact", new_contact_path, remote: true %></button>
 </div>
 <div class="container">
 
   <div class="contact-index">
-    <% @contacts.each do |contact| %>
-      <h2><%= link_to "#{contact.first_name} #{contact.last_name}", contact_path(contact) %></h2>
-    <% end %>
+    <%= render "index" %>
   </div>
 
   <div class="new-contact"></div>
