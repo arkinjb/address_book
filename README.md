@@ -12,7 +12,8 @@
 
 ## To-do list
 1. Add email and phone number
-2. Regex validations server side 
-3. Client side validations in bootstrap modal (turn input fields red or green)
-4. Search and/or sort functionality
-5. Use collapsible panels/accordion on index page
+2. Deploy to Heroku
+3. Regex validations server side
+4. Client side validations in bootstrap modal (turn input fields red or green)
+5. Search and/or sort functionality
+6. Use collapsible panels/accordion on index page
