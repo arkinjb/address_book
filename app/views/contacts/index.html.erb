@@ -4,11 +4,10 @@
 </div>
 <div class="container">
 
-  <div class="contacts">
+  <div class="contact-index">
     <% @contacts.each do |contact| %>
       <h2><%= link_to "#{contact.first_name} #{contact.last_name}", contact_path(contact) %></h2>
     <% end %>
-
   </div>
 
   <div class="new-contact"></div>

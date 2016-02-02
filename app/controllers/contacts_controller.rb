@@ -9,8 +9,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.create!(contact_params)
-    redirect_to (contact_path(@contact))
+    @contact = Contact.create(contact_params)
   end
 
   def show
@@ -24,13 +23,15 @@ class ContactsController < ApplicationController
   def update
     @contact = Contact.find(params[:id])
     @contact.update(contact_params)
-    redirect_to contact_path(@contact)
+  end
+
+  def delete
+    @contact = Contact.find(params[:contact_id])
   end
 
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
-    redirect_to contacts_path
   end
 
   private

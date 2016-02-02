@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :contacts do
+    get "delete"
+  end
+
   root to: "contacts#index"
-
-  resources :contacts
-
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

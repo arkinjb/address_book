@@ -1,0 +1,3 @@
+<% @contacts.each do |contact| %>
+  <h2><%= link_to "#{contact.first_name} #{contact.last_name}", contact_path(contact) %></h2>
+<% end %>
