@@ -11,9 +11,6 @@
   - if there is a validation error, the modal stays visible and the errors show next to the form fields in the modal window
 
 ## To-do list
-1. Add email and phone number
-2. Deploy to Heroku
-3. Regex validations server side
-4. Client side validations in bootstrap modal (turn input fields red or green)
-5. Search and/or sort functionality
-6. Use collapsible panels/accordion on index page
+1. Regex validations server side
+2. Client side validations in bootstrap modal (turn input fields red or green)
+3. Search and/or sort functionality
